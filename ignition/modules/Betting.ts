@@ -1,7 +1,7 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
 const BettingModule = buildModule("BettingModule", (m) => {
-  const paymentToken = "0xb46584e0efdE3092e04010A13f2eAe62aDb3b9F0"
+  const paymentToken = "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14"
 
   const betting = m.contract("Betting", [paymentToken]);
 

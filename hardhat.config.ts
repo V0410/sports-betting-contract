@@ -22,6 +22,12 @@ const config: HardhatUserConfig = {
     //   gasPrice: 20000000000,
     //   accounts: [process.env.PRIVATE_KEY!]
     // },
+    sepolia: {
+      url: process.env.SEPOLIA_RPC,
+      chainId: 11155111,
+      gasPrice: 20000000000,
+      accounts: [process.env.PRIVATE_KEY!]
+    },
     base_testnet: {
       url: process.env.BASE_TESTNET_RPC,
       chainId: 84532,
@@ -36,14 +42,14 @@ const config: HardhatUserConfig = {
     }
   },
   etherscan: {
-    apiKey: process.env.BASE_SEPOLIASCAN_API_KEY,
+    apiKey: process.env.ETHERSCAN_API_KEY,
     customChains: [
       {
-        network: "base_testnet",
-        chainId: 84532,
+        network: "sepolia",
+        chainId: 11155111,
         urls: {
-          apiURL: "https://api-sepolia.basescan.org/api",
-          browserURL: "https://sepolia.basescan.org/"
+          apiURL: "https://api-sepolia.etherscan.io/api",
+          browserURL: "https://sepolia.etherscan.io/"
         }
       }
     ]

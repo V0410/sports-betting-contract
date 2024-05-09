@@ -43,6 +43,10 @@ contract Betting {
     owner = _newOwner;
   }
 
+  function updatePaymentToken(address _newPaymentToken) public onlyOwner {
+    paymentToken = IERC20(_newPaymentToken);
+  }
+
   /// @notice Withdraw the bet
   /// @param _to: better's address
   /// @param _amount: the amount of the user's bet
